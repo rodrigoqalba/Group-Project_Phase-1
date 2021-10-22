@@ -5,6 +5,7 @@
   <meta charset="utf-8" />
   <title>Pick Your Poison</title>
   <link rel="stylesheet" type="text/css" href="styles.css" />
+  <script src="https://kit.fontawesome.com/fa973cab36.js" crossorigin="anonymous"></script>
   <script defer src="index.js"></script>
 </head>
 
@@ -12,29 +13,42 @@
   <header>
     <h3>Pick Your Poison</h3>
   </header>
-  <div>
-      <img>
-      <img>
-      <img>
-      <img>
-      <img>
-      <img>
-      <img>
-      <img>
+  <div id="drink-menu">
+      //drinks will go here
   </div>
   <div>
-      <btn></btn>
+      <button id="surprise">Surprise Me!</button>
   </div>
-  <div>
-      <h2>Drink Name</h2>
-      <img>
-      <h3>Glass Type</h3>
-      <h3>Ingridients & measurements</h3>!!!!
-      <p>instructions</p>
-      <btn></btn>
+  <div id="drink-container">
+      <h2 id="drink-name">Drink Name</h2>
+      <img id="drink-img">
+      <h3 id="drink-glass">Glass Type</h3>
+      <div id="drink-ing">Ingridients & measurements
+        <ul>
+          // list items here from API
+        </ul>
+      </div>!!!!
+      <p id="drink-inst">instructions</p>
+      <button id="drink-likes"><i class="fas fa-heart"></i></button>
   </div>
-  <div>favorites here</div>
+ 
 
+  <form id="new-Drink">
+    <h4>Add New Drink</h4>
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="new-name" />
+    <label for="glass">Glass Type: </label>
+    <input type="text" name="glass" id="new-glass" />
+    <label for="image">Image: </label>
+    <input type="text" name="image" id="new-image" />
+    <label for="ingredients">Ingridients & Measurements: </label>
+    <input type="number" name="ingredients" id="new-ingredients" />
+    <label for="new-instructions">Instructions: </label>
+    <textarea name="new-instructions" id="new-instructions"></textarea>
+    <input type="submit" value="Create" />
+  </form>
+
+  <div>favorites here</div>
 </body>
 
 </html>
