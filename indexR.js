@@ -2,7 +2,6 @@ const randomBASE_URL = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 const baseURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 
 const drinkMenu = document.querySelector("#drink-menu")
-// const menuImage = document.createElement("img")
 const randomDrink = document.getElementsByClassName("surprise")
 const randomDrinkImage = document.getElementById("sup")
 const randomDrinkName = document.getElementById("sup-drink-name")
@@ -17,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(resp => resp.json())
     .then(drinks => {
         drinksArray = Object.entries(drinks.drinks)
-        // console.log(drinksArray)
+        console.log(drinksArray)
         dataFeeder(drinksArray)
         })
 })
@@ -34,7 +33,31 @@ function displayDrinks(drinksArray) {
         const menuImage = document.createElement("img")
         menuImage.src = drinksArray[1].strDrinkThumb
         drinkMenu.append(menuImage)
-        // console.log(menuImage)
+        console.log(menuImage)
+}
+
+//import and click for featured image
+function displayDrinks(drinksArray) {
+    const menuImage = document.createElement("img")
+    menuImage.src = drinksArray[1].strDrinkThumb
+
+    menuImage.addEventListener('click', () => {
+        document.querySelector("#drink-img").src = drinksArray[1].strDrinkThumb;
+        document.querySelector("#drink-name").textContent = drinksArray[1].strDrink;
+        document.querySelector("#drink-glass").textContent = `Glass Type: ${drinksArray[1].strGlass}`;
+        document.getElementById("ing").textContent = `${drinksArray[1].strIngredient1}, ${drinksArray[1].strIngredient2}, ${drinksArray[1].strIngredient3}`;
+        document.getElementById("drink-inst").textContent = `Instructions: ${drinksArray[1].strInstructions}`;
+    })
+    drinkMenu.append(menuImage)
+}
+
+//displays first child on load
+function displayFirstRamen(drinksArray){
+document.querySelector("#drink-img").src = drinksArray[1].strDrinkThumb;
+document.querySelector("#drink-name").textContent = drinksArray[1].strDrink;
+document.querySelector("#drink-glass").textContent = drinksArray[1].strGlass;
+document.getElementById("ing").textContent = `${drinksArray[1].strIngredient1}, ${drinksArray[1].strIngredient2}, ${drinksArray[1].strIngredient3}`;
+document.getElementById("drink-inst").textContent = drinksArray[1].strInstructions;
 }
 
 // Random Drink Button 
