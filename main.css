@@ -1,8 +1,7 @@
 body {
   font-family: Poppins;
   margin: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(ivory), to(#cdc2b5));
-  background: linear-gradient(ivory, #cdc2b5);
+  background: #cdc2b5;
 }
 
 .grid-container {
@@ -13,8 +12,8 @@ body {
   -ms-grid-rows: minmax(175px, auto);
       grid-template-rows: minmax(175px, auto);
       grid-template-areas: "header header  header"  "main   main    main" "logo   detail  surprise" ".      new     ." "footer footer  footer";
-  height: auto;
-  grid-gap: 30px;
+  height: 100vh;
+  grid-gap: 10px;
 }
 
 header {
@@ -53,8 +52,8 @@ main #drink-menu {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: minmax(200px, auto);
-      grid-template-rows: minmax(200px, auto);
+  -ms-grid-rows: minmax(150px, auto);
+      grid-template-rows: minmax(150px, auto);
   grid-gap: 10px;
   padding: 30px;
 }
@@ -63,13 +62,13 @@ main #mule {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1 / 2;
-  width: 250px;
+  width: 200px;
   justify-self: center;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 15px;
+  padding: 5px;
   background-color: #f4f3ed;
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -79,13 +78,13 @@ main #lemon {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
-  width: 250px;
+  width: 200px;
   justify-self: center;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 15px;
+  padding: 5px;
   background-color: #f4f3ed;
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -95,13 +94,13 @@ main #apoth {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3 / 4;
-  width: 250px;
+  width: 200px;
   justify-self: center;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 15px;
+  padding: 5px;
   background-color: #f4f3ed;
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -111,13 +110,13 @@ main #bar {
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
   grid-column: 4 / 5;
-  width: 250px;
+  width: 200px;
   justify-self: center;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 15px;
+  padding: 5px;
   background-color: #f4f3ed;
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -127,13 +126,13 @@ main #colors {
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
   grid-column: 4 / 5;
-  width: 250px;
+  width: 200px;
   justify-self: center;
   margin: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 15px;
+  padding: 5px;
   background-color: #f4f3ed;
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -191,7 +190,7 @@ main #colors {
 
 .featured #drink-img {
   margin-top: 0px;
-  width: 400px;
+  width: 300px;
   background-color: #f4f3ed;
   padding: 15px;
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -343,7 +342,7 @@ input[type="submit"]:active {
 }
 
 .surprise #sup {
-  width: 400px;
+  width: 300px;
   background-color: #f4f3ed;
   padding: 15px;
   -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
