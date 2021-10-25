@@ -28,10 +28,10 @@ body {
         "header header  header" 
         "main   main    main"
         "logo   detail  surprise"
-        ".   new   ."
+        ".      new     ."
         "footer footer  footer";
     height: auto;
-    grid-gap: 50px;
+    grid-gap: 30px;
 
 }
 
@@ -131,7 +131,7 @@ main {
 
     .bottle-logo{
         display: flex;
-        height: 600px;
+        height: 400px;
         justify-items: center;
         margin: auto;
     }

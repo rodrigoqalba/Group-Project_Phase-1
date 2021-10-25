@@ -12,9 +12,9 @@ body {
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: minmax(175px, auto);
       grid-template-rows: minmax(175px, auto);
-      grid-template-areas: "header header  header"  "main   main    main" "logo   detail  surprise" ".   new   ." "footer footer  footer";
+      grid-template-areas: "header header  header"  "main   main    main" "logo   detail  surprise" ".      new     ." "footer footer  footer";
   height: auto;
-  grid-gap: 50px;
+  grid-gap: 30px;
 }
 
 header {
@@ -154,7 +154,7 @@ main #colors {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 600px;
+  height: 400px;
   justify-items: center;
   margin: auto;
 }
