@@ -24,6 +24,7 @@ function makeDataGlobal(drinksArray){
     return dataHolder;
 }
 
+//import and click for featured image
 function displayDrinks(drinksArray) {
         const menuImage = document.createElement("img")
         menuImage.src = drinksArray[1].strDrinkThumb
@@ -38,6 +39,7 @@ function displayDrinks(drinksArray) {
         drinkMenu.append(menuImage)
 }
 
+//displays first child on load
 function displayFirstRamen(drinksArray){
     document.querySelector("#drink-img").src = drinksArray[1].strDrinkThumb;
     document.querySelector("#drink-name").innerHTML = drinksArray[1].strDrink;

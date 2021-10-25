@@ -36,6 +36,30 @@ function displayDrinks(drinksArray) {
         console.log(menuImage)
 }
 
+//import and click for featured image
+function displayDrinks(drinksArray) {
+    const menuImage = document.createElement("img")
+    menuImage.src = drinksArray[1].strDrinkThumb
+
+    menuImage.addEventListener('click', () => {
+        document.querySelector("#drink-img").src = drinksArray[1].strDrinkThumb;
+        document.querySelector("#drink-name").innerHTML = drinksArray[1].strDrink;
+        document.querySelector("#drink-glass").innerHTML = drinksArray[1].strGlass;
+        document.getElementById("ing").innerHTML = `${drinksArray[1].strIngredient1}, ${drinksArray[1].strIngredient2}, ${drinksArray[1].strIngredient3}`;
+        document.getElementById("drink-inst").innerHTML = drinksArray[1].strInstructions;
+    })
+    drinkMenu.append(menuImage)
+}
+
+//displays first child on load
+function displayFirstRamen(drinksArray){
+document.querySelector("#drink-img").src = drinksArray[1].strDrinkThumb;
+document.querySelector("#drink-name").innerHTML = drinksArray[1].strDrink;
+document.querySelector("#drink-glass").innerHTML = drinksArray[1].strGlass;
+document.getElementById("ing").innerHTML = `${drinksArray[1].strIngredient1}, ${drinksArray[1].strIngredient2}, ${drinksArray[1].strIngredient3}`;
+document.getElementById("drink-inst").innerHTML = drinksArray[1].strInstructions;
+}
+
 // Random Drink Button 
 
 surpriseMeButton.addEventListener("click", () => {
