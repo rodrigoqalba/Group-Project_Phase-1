@@ -1,21 +1,30 @@
-document.addEventListener("DOMContentLoaded", getData)
-const BASE_URL = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
-
-let dataHolder = [];
+const randomBASE_URL = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
+const baseURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 
 const drinkMenu = document.querySelector("#drink-menu")
+let dataHolder= [];
 
-function getData(){
-    fetch(BASE_URL)
-    .then((resp) => resp.json())
-    .then(data => dataFeeder(data));
+document.addEventListener("DOMContentLoaded", () => {
+    fetch(baseURL)
+    .then(resp => resp.json())
+    .then(drinks => {
+        drinksArray = Object.entries(drinks.drinks)
+        console.log(drinksArray)
+        dataFeeder(drinksArray)
+        })
+})
+function dataFeeder(drinksArray){
+    drinksArray.forEach(displayDrinks);
+    makeDataGlobal(drinksArray);
 }
-function dataFeeder(data){
-    // data.forEach(drinkyDrinks);
-    makeDataGlobal(data);
-}
-function makeDataGlobal(data){
-    dataHolder = [...data]
+function makeDataGlobal(drinksArray){
+    dataHolder = [...drinksArray]
     return dataHolder;
 }
 
+function displayDrinks(drinksArray) {
+        const menuImage = document.createElement("img")
+        menuImage.src = drinksArray[1].strDrinkThumb
+        drinkMenu.append(menuImage)
+        console.log(menuImage)
+}

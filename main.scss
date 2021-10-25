@@ -53,13 +53,31 @@ main {
     justify-content: center;
     align-content: center;
 
-    #drink-menu{
-			display: grid;
-			grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-            grid-template-rows: minmax(150px, auto);
-			grid-gap: 10px;
-            padding: 30px;
-    }
+    #drink-menu {
+        display: flex;
+        overflow-x: auto;
+        margin: 1rem 0;
+        max-width: calc(100vw - 2rem);
+      }
+      
+      #drink-menu img {
+        flex: 0 1 auto;
+        height: 150px;
+        margin-right: 0.5rem;
+        cursor: pointer;
+      }
+      
+      #drink-menu img:last-child {
+        margin-right: 0;
+      }
+
+    // #drink-menu{
+	// 		display: grid;
+	// 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    //         grid-template-rows: minmax(150px, auto);
+	// 		grid-gap: 10px;
+    //         padding: 30px;
+    // }
 
     // #drink-menu p {
     //     border: 1px solid #fff;
