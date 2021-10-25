@@ -1,54 +1,82 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Pick Your Poison</title>
-  <link rel="stylesheet" type="text/css" href="styles.css" />
-  <script src="https://kit.fontawesome.com/fa973cab36.js" crossorigin="anonymous"></script>
-  <script defer src="index.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="./main.css">
+    <script defer src="https://kit.fontawesome.com/fa973cab36.js" crossorigin="anonymous"></script>
+    <script defer src="index.js"></script>
+    <title>Pick Your Poison</title>
 </head>
-
 <body>
-  <header>
-    <h3>Pick Your Poison</h3>
-  </header>
-  <div id="drink-menu">
-      //drinks will go here
-  </div>
-  <div>
-      <button id="surprise">Surprise Me!</button>
-  </div>
-  <div id="drink-container">
-      <h2 id="drink-name">Drink Name</h2>
-      <img id="drink-img">
-      <h3 id="drink-glass">Glass Type</h3>
-      <div id="drink-ing">Ingridients & measurements
-        <ul>
-          // list items here from API
-        </ul>
-      </div>!!!!
-      <p id="drink-inst">instructions</p>
-      <button id="drink-likes"><i class="fas fa-heart"></i></button>
-  </div>
- 
+    <div class="grid-container">
+        <header>
+            <img id="header-logo" src="images/Logo White.png" alt="poison-logo">
+        </header>
+        <main>
+            <div id="drink-menu">
+                <p class="menu-img"><img src="./images/moscow.jpg" alt="mule" id="mule"></p>
+                <p class="menu-img"><img src="./images/lemon.jpg" alt="lemon" id="lemon"></p>
+                <p class="menu-img"><img src="./images/apoth.jpg" alt="apoth" id="apoth"></p>
+                <p class="menu-img"><img src="./images/bar.jpg" alt="bar" id="bar"></p>
+                <p class="menu-img"><img src="./images/colors.jpg" alt="colored-bottles" id="colors"></p>
+            </div>
+        </main> 
+        <section class="logo">
+            <img src="./images/Poison Logo.png" alt="bottle-logo" class="bottle-logo">
+        </section>
+        <section class="featured">
+            <div id="drink-container">
+                <h1 id="feature-banner">Featured</h1>
+                <img id="drink-img" src="images/moscow.jpg" alt="moscow">
+                <h3 id="drink-name">Featured Drink Name</h3>
+                <h4 id="drink-glass">Glass Type:</h4>
+                <div id="drink-ing">Ingridients:
+                  <ul>
+                  </ul>
+                </div>
+                <p id="drink-inst">Recipe:</p>
+                <button id="drink-likes"><i class="fas fa-heart"></i></button>
+            </div>
+        </section>
+        <section class="new">
+            
+            <h1 id="new-banner">What's Your Poison?</h1>
+            <form id="new-drink">
+                <h2>Add Your Favorite Drink!</h2>
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="new-name" />
+                <label for="glass">Glass Type: </label>
+                <input type="text" name="glass" id="new-glass" />
+                <label for="image">Image: </label>
+                <input type="url" name="image" id="new-image" />
+                <label for="ingredients">Ingridients & Measurements: </label>
+                <input type="text" name="ingredients" id="new-ingredients" />
+                <label for="new-instructions">Instructions: </label>
+                <textarea name="new-instructions" id="new-instructions"></textarea>
+                <input type="submit" value="Create" />
+              </form>
+              <img src="./images/PP Logo.png" alt="pp-logo" id="pp-logo">
+        </section>
+        <section class="footer">
+            Footer
+        </section>
 
-  <form id="new-Drink">
-    <h4>Add New Drink</h4>
-    <label for="name">Name: </label>
-    <input type="text" name="name" id="new-name" />
-    <label for="glass">Glass Type: </label>
-    <input type="text" name="glass" id="new-glass" />
-    <label for="image">Image: </label>
-    <input type="text" name="image" id="new-image" />
-    <label for="ingredients">Ingridients & Measurements: </label>
-    <input type="number" name="ingredients" id="new-ingredients" />
-    <label for="new-instructions">Instructions: </label>
-    <textarea name="new-instructions" id="new-instructions"></textarea>
-    <input type="submit" value="Create" />
-  </form>
+        <div class="surprise"> 
+            <h1 id="surp-banner">Feeling Lucky?</h1>
+            <img src="images/surprise.jpg" id=sup alt="surprise">
+            <button id="surprise-me">Surprise Me!</button>
+            <h3 id="sup-drink-name">Drink Name</h3>
+            <h4 id="sup-drink-glass">Glass Type: ?</h4>
+            <div id="sup-drink-ing">Ingridients: ?
+              <ul>
+              </ul>
+            </div>
+            <p id="sup-drink-inst">Recipe: ?</p>
+        </div>
+    </div>
 
-  <div>favorites here</div>
 </body>
-
 </html>

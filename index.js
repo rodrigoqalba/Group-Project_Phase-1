@@ -3,13 +3,15 @@ const BASE_URL = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
 
 let dataHolder = [];
 
+const drinkMenu = document.querySelector("#drink-menu")
+
 function getData(){
     fetch(BASE_URL)
     .then((resp) => resp.json())
     .then(data => dataFeeder(data));
 }
 function dataFeeder(data){
-    data.forEach(drinkyDrinks);
+    // data.forEach(drinkyDrinks);
     makeDataGlobal(data);
 }
 function makeDataGlobal(data){
@@ -17,8 +19,3 @@ function makeDataGlobal(data){
     return dataHolder;
 }
 
-function drinkyDrinks (data){
-    const drinksImg = document.createElement("img")
-    drinksImg.src = data.image
-    ramenMenu.append(drinksImg)
-}
