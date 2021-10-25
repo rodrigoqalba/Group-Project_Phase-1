@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(resp => resp.json())
     .then(drinks => {
         drinksArray = Object.entries(drinks.drinks)
-        console.log(drinksArray)
         dataFeeder(drinksArray)
 })
 })
 
 function dataFeeder(drinksArray){
     drinksArray.forEach(displayDrinks);
+    displayFirstRamen(drinksArray[0])
     makeDataGlobal(drinksArray);
 }
 
@@ -36,5 +36,13 @@ function displayDrinks(drinksArray) {
             document.getElementById("drink-inst").innerHTML = drinksArray[1].strInstructions;
         })
         drinkMenu.append(menuImage)
+}
+
+function displayFirstRamen(drinksArray){
+    document.querySelector("#drink-img").src = drinksArray[1].strDrinkThumb;
+    document.querySelector("#drink-name").innerHTML = drinksArray[1].strDrink;
+    document.querySelector("#drink-glass").innerHTML = drinksArray[1].strGlass;
+    document.getElementById("ing").innerHTML = `${drinksArray[1].strIngredient1}, ${drinksArray[1].strIngredient2}, ${drinksArray[1].strIngredient3}`;
+    document.getElementById("drink-inst").innerHTML = drinksArray[1].strInstructions;
 }
 
