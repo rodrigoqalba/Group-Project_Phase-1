@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function dataFeeder(drinksArray){
     drinksArray.forEach(displayDrinks);
-    displayFirstRamen(drinksArray[0])
+    displayFirstDrink(drinksArray[0])
     makeDataGlobal(drinksArray);
 }
 
@@ -53,7 +53,7 @@ function displayDrinks(drinksArray) {
         drinkMenu.append(menuImage)
 }
 
-function displayFirstRamen(drinksArray){
+function displayFirstDrink(drinksArray){
     document.querySelector("#drink-img").src = drinksArray[1].strDrinkThumb;
     document.querySelector("#drink-name").textContent = drinksArray[1].strDrink;
     document.querySelector("#drink-glass").textContent = drinksArray[1].strGlass;
@@ -105,6 +105,7 @@ function displayUserDrink(newDrinksObj) {
         document.querySelector("#drink-glass").textContent = newDrinksObj.strGlass;
         document.getElementById("ing").textContent = `${newDrinksObj.strIngredient1}`;
         document.getElementById("drink-inst").textContent = newDrinksObj.strInstructions;
+        likeNumber.textContent = 0
     })
     drinkMenu.append(newMenuImage)
 }
