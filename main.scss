@@ -17,7 +17,8 @@ $borders: 15px;
 body {
     font-family: Poppins;
     margin: 0;
-    background: rgb(205, 194, 181);
+    background-color: rgb(205, 194, 181);
+    z-index: -1;
     }
 
 .grid-container {
@@ -85,60 +86,60 @@ main {
     //     margin: 0;
     // }
 
-    #mule{
-        grid-column: 1 / 2;
-        width: 200px;
-        justify-self: center;
-        margin: auto;
-        display: flex;
-        padding:5px;
-        background-color:color(accent);
-        box-shadow: 0 10px 30px rgba(0,0,0,.2);
-    }
+    // #mule{
+    //     grid-column: 1 / 2;
+    //     width: 200px;
+    //     justify-self: center;
+    //     margin: auto;
+    //     display: flex;
+    //     padding:5px;
+    //     background-color:color(accent);
+    //     box-shadow: 0 10px 30px rgba(0,0,0,.2);
+    // }
 
-    #lemon{
-        grid-column: 2 / 3;
-        width: 200px;
-        justify-self: center;
-        margin: auto;
-        display: flex;
-        padding:5px;
-        background-color:color(accent);
-        box-shadow: 0 10px 30px rgba(0,0,0,.2);
-    }
+    // #lemon{
+    //     grid-column: 2 / 3;
+    //     width: 200px;
+    //     justify-self: center;
+    //     margin: auto;
+    //     display: flex;
+    //     padding:5px;
+    //     background-color:color(accent);
+    //     box-shadow: 0 10px 30px rgba(0,0,0,.2);
+    // }
 
-    #apoth{
-        grid-column: 3 / 4;
-        width: 200px;
-        justify-self: center;
-        margin: auto;
-        display: flex;
-        padding:5px;
-        background-color:color(accent);
-        box-shadow: 0 10px 30px rgba(0,0,0,.2);
-    }
+    // #apoth{
+    //     grid-column: 3 / 4;
+    //     width: 200px;
+    //     justify-self: center;
+    //     margin: auto;
+    //     display: flex;
+    //     padding:5px;
+    //     background-color:color(accent);
+    //     box-shadow: 0 10px 30px rgba(0,0,0,.2);
+    // }
 
-    #bar{
-        grid-column: 4 / 5;
-        width: 200px;
-        justify-self: center;
-        margin: auto;
-        display: flex;
-        padding:5px;
-        background-color:color(accent);
-        box-shadow: 0 10px 30px rgba(0,0,0,.2);
-    }
+    // #bar{
+    //     grid-column: 4 / 5;
+    //     width: 200px;
+    //     justify-self: center;
+    //     margin: auto;
+    //     display: flex;
+    //     padding:5px;
+    //     background-color:color(accent);
+    //     box-shadow: 0 10px 30px rgba(0,0,0,.2);
+    // }
 
-    #colors{
-        grid-column: 4 / 5;
-        width: 200px;
-        justify-self: center;
-        margin: auto;
-        display: flex;
-        padding:5px;
-        background-color:color(accent);
-        box-shadow: 0 10px 30px rgba(0,0,0,.2);
-    }
+    // #colors{
+    //     grid-column: 4 / 5;
+    //     width: 200px;
+    //     justify-self: center;
+    //     margin: auto;
+    //     display: flex;
+    //     padding:5px;
+    //     background-color:color(accent);
+    //     box-shadow: 0 10px 30px rgba(0,0,0,.2);
+    // }
 }
 
 .logo {
@@ -161,6 +162,18 @@ main {
     justify-items: center;
     margin-top: 0px;
 
+    #drink-container{
+            text-align: center;
+            border: grey solid 1px;
+            background-color: color(accent);
+            padding: 1rem;
+            width: 15rem;
+            height: 25rem;
+            display: inline-grid;
+            margin: 1rem 2rem;
+            overflow: auto;
+        }
+    
     #feature-banner{
         margin-top: 0;
         margin-bottom: 30px;
@@ -197,8 +210,9 @@ main {
         color:rgb(54, 54, 133);
         text-decoration: none;
         border: none;
+        display: grid;
+        justify-content: center;
         background-color: color(accent);
-        box-shadow: 0 10px 30px rgba(0,0,0,.2);
     }
 }
 
@@ -303,6 +317,19 @@ input[type="submit"] {
         text-align: center;
         padding: $padding;
     }
+
+    #sup-container{
+        text-align: center;
+        border: grey solid 1px;
+        background-color: color(accent);
+        padding: 1rem;
+        width: 15rem;
+        height: 25rem;
+        display: inline-grid;
+        margin: 1rem 2rem;
+        overflow: auto;
+    }
+
     #sup {
         width: 300px;
         background-color:color(accent);
@@ -326,6 +353,7 @@ input[type="submit"] {
         color: white;
         position:relative;
         top: 10px;
+
     }
 }
 
