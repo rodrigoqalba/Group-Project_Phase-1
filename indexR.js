@@ -57,7 +57,7 @@ function displayFirstDrink(drinksArray){
     document.querySelector("#drink-img").src = drinksArray[1].strDrinkThumb;
     document.querySelector("#drink-name").textContent = drinksArray[1].strDrink;
     document.querySelector("#drink-glass").textContent = drinksArray[1].strGlass;
-    document.getElementById("ing").textContent = `${drinksArray[1].strIngredient1}, ${drinksArray[1].strIngredient2}, ${drinksArray[1].strIngredient3}`;
+    document.getElementById("ing").textContent = `${drinksArray[1].strIngredient1}(${randomDrinkArray[1].strMeasure1}), ${drinksArray[1].strIngredient2}(${randomDrinkArray[1].strMeasure2}), ${drinksArray[1].strIngredient3}(${randomDrinkArray[1].strMeasure3})`;
     document.getElementById("drink-inst").textContent = drinksArray[1].strInstructions;
 }
 
@@ -77,7 +77,7 @@ surpriseMeButton.addEventListener("click", () => {
             randomDrinkImage.src = randomDrinkArray[1].strDrinkThumb
             randomDrinkName.textContent = `${randomDrinkArray[1].strDrink}`
             randomDrinkGlass.textContent = `${randomDrinkArray[1].strGlass}`
-            randomDrinkIngridients.textContent = `Ingridients: ${randomDrinkArray[1].strIngredient1}, ${randomDrinkArray[1].strIngredient2}, ${randomDrinkArray[1].strIngredient3}, ${randomDrinkArray[1].strIngredient4}`
+            randomDrinkIngridients.textContent = `Ingredients: ${randomDrinkArray[1].strIngredient1}(${randomDrinkArray[1].strMeasure1}), ${randomDrinkArray[1].strIngredient2}(${randomDrinkArray[1].strMeasure2}), ${randomDrinkArray[1].strIngredient3}(${randomDrinkArray[1].strMeasure3}), ${randomDrinkArray[1].strIngredient4}(${randomDrinkArray[1].strMeasure4})`
             randomDrinkRecipe.textContent = `Instructions: ${randomDrinkArray[1].strInstructions}`
         }
 })

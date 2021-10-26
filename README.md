@@ -35,7 +35,7 @@ MVP:
 Strectch Goal:
 
 -creating a favorites menu, where our likes drinks will be added to 
--add music
+-add music 
 -look good (CSS)
 -add scroll to images/carousel 
 
