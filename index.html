@@ -7,7 +7,7 @@
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link rel="stylesheet" href="./main.css">
     <script defer src="https://kit.fontawesome.com/fa973cab36.js" crossorigin="anonymous"></script>
-    <script defer src="indexJ.js"></script>
+    <script defer src="indexR.js"></script>
     <title>Pick Your Poison</title>
 </head>
 <body>
@@ -22,6 +22,21 @@
         </main> 
         <section class="logo">
             <img src="./images/Poison Logo.png" alt="bottle-logo" class="bottle-logo">
+            <br>
+            <br>
+            <br>
+            <br>
+            <div id="music-container">
+                <h1 id="music-header">MUSIC </h1>
+                <h4>Escape - Rupert Holmes</h4>
+                <audio controls>
+                    <source src="Musica/d Rupert Holmes - Escape (The Piña Colada Song).mp3" type="audio/mpeg" class="audio">
+                </audio>
+                <h4>Margaritaville - Jimmy Buffett</h4>
+                <audio controls>
+                    <source src="Musica/f Jimmy Buffett - Margaritaville.mp3" type="audio/mpeg" class="audio">
+                </audio>
+            </div>
         </section>
         <section class="featured">
      
@@ -34,7 +49,10 @@
                   <p id="ing">Ingredients List</p>
                 </div>
                 <p id="drink-inst">Recipe</p>
-                <button id="drink-likes"><i class="fas fa-heart"></i></button>
+                <p id="number-of-likes">Like Count: <span id="like-number">0</span></p>
+                <button id="drink-likes">
+                    <i class="fas fa-heart"></i>
+                </button>
             </div>
             
         </section>
@@ -77,6 +95,5 @@
             </div>
         </div>
     </div>
-
 </body>
 </html>

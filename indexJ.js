@@ -10,6 +10,9 @@ const randomDrinkIngridients = document.getElementById("sup-drink-ing")
 const randomDrinkRecipe = document.getElementById("sup-drink-inst")
 const surpriseMeButton = document.getElementById("surprise-me")
 const newDrinkForm = document.querySelector('#new-drink')
+const numberOfLikes = document.getElementById("number-of-likes")
+const likesButton = document.getElementById("drink-likes")
+const likeNumber = document.getElementById("like-number")
 
 let dataHolder= [];
 
@@ -41,20 +44,21 @@ function displayDrinks(drinksArray) {
 
         menuImage.addEventListener('click', () => {
             document.querySelector("#drink-img").src = drinksArray[1].strDrinkThumb;
-            document.querySelector("#drink-name").innerHTML = drinksArray[1].strDrink;
-            document.querySelector("#drink-glass").innerHTML = drinksArray[1].strGlass;
-            document.getElementById("ing").innerHTML = `${drinksArray[1].strIngredient1}, ${drinksArray[1].strIngredient2}, ${drinksArray[1].strIngredient3}`;
-            document.getElementById("drink-inst").innerHTML = drinksArray[1].strInstructions;
+            document.querySelector("#drink-name").textContent = drinksArray[1].strDrink;
+            document.querySelector("#drink-glass").textContent = drinksArray[1].strGlass;
+            document.getElementById("ing").textContent = `${drinksArray[1].strIngredient1}, ${drinksArray[1].strIngredient2}, ${drinksArray[1].strIngredient3}`;
+            document.getElementById("drink-inst").textContent = drinksArray[1].strInstructions;
+            likeNumber.textContent = 0
         })
         drinkMenu.append(menuImage)
 }
 
 function displayFirstRamen(drinksArray){
     document.querySelector("#drink-img").src = drinksArray[1].strDrinkThumb;
-    document.querySelector("#drink-name").innerHTML = drinksArray[1].strDrink;
-    document.querySelector("#drink-glass").innerHTML = drinksArray[1].strGlass;
-    document.getElementById("ing").innerHTML = `${drinksArray[1].strIngredient1}, ${drinksArray[1].strIngredient2}, ${drinksArray[1].strIngredient3}`;
-    document.getElementById("drink-inst").innerHTML = drinksArray[1].strInstructions;
+    document.querySelector("#drink-name").textContent = drinksArray[1].strDrink;
+    document.querySelector("#drink-glass").textContent = drinksArray[1].strGlass;
+    document.getElementById("ing").textContent = `${drinksArray[1].strIngredient1}, ${drinksArray[1].strIngredient2}, ${drinksArray[1].strIngredient3}`;
+    document.getElementById("drink-inst").textContent = drinksArray[1].strInstructions;
 }
 
 surpriseMeButton.addEventListener("click", () => {
@@ -104,3 +108,10 @@ function displayUserDrink(newDrinksObj) {
     })
     drinkMenu.append(newMenuImage)
 }
+
+likesButton.addEventListener("click", () => {
+    let currNum = likeNumber.innerText;
+    currNum++;
+    let newCount = parseInt(currNum);
+    likeNumber.textContent= newCount
+})
