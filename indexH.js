@@ -46,8 +46,20 @@ function displayDrinks(drinksArray) {
             document.querySelector("#drink-img").src = drinksArray[1].strDrinkThumb;
             document.querySelector("#drink-name").textContent = drinksArray[1].strDrink;
             document.querySelector("#drink-glass").textContent = drinksArray[1].strGlass;
-            document.getElementById("ing").textContent = `${drinksArray[1].strIngredient1}, ${drinksArray[1].strIngredient2}, ${drinksArray[1].strIngredient3}`;
             document.getElementById("drink-inst").textContent = drinksArray[1].strInstructions;
+            
+            var stringText = ""
+            for (const key in drinksArray[1]) {
+                console.log(drinksArray[1])
+                if (!key.startsWith("strIngredient")) { continue }
+                if (drinksArray[1][key] != null && drinksArray[1][key] != undefined) {
+                let measureKey = key.replace('Ingredient', 'Measure') // strIngredient1 => strMeasure1
+                stringText = stringText + `${drinksArray[1][key]}(${drinksArray[1][measureKey]}), `
+            }
+        }
+            document.getElementById("ing").textContent = stringText.replaceAll('(null)', '').slice(0, -2)
+            // document.getElementById("ing").textContent = `${drinksArray[1].strIngredient1}, ${drinksArray[1].strIngredient2}, ${drinksArray[1].strIngredient3}`;
+            
             likeNumber.textContent = 0
         })
         drinkMenu.append(menuImage)
@@ -126,8 +138,21 @@ function displayUserDrink(newDrinksObj) {
         document.querySelector("#drink-img").src = newDrinksObj.strDrinkThumb;
         document.querySelector("#drink-name").textContent = newDrinksObj.strDrink;
         document.querySelector("#drink-glass").textContent = newDrinksObj.strGlass;
-        document.getElementById("ing").textContent = `${newDrinksObj.strIngredient1}`;
         document.getElementById("drink-inst").textContent = newDrinksObj.strInstructions;
+        
+        var stringText = ""
+        for (const key in newDrinksObj[1]) {
+            console.log(newDrinksObj[1])
+            if (!key.startsWith("strIngredient")) { continue }
+            if (newDrinksObj[1][key] != null && newDrinksObj[1][key] != undefined) {
+            let measureKey = key.replace('Ingredient', 'Measure') // strIngredient1 => strMeasure1
+            stringText = stringText + `${newDrinksObj[1][key]}(${newDrinksObj[1][measureKey]}), `
+        }
+    }
+        document.getElementById("ing").textContent = stringText.replaceAll('(null)', '').slice(0, -2)
+        // document.getElementById("ing").textContent = `${newDrinksObj.strIngredient1}`;
+
+        
         likeNumber.textContent = 0
     })
     drinkMenu.append(newMenuImage)
