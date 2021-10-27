@@ -140,17 +140,17 @@ function displayUserDrink(newDrinksObj) {
         document.querySelector("#drink-glass").textContent = newDrinksObj.strGlass;
         document.getElementById("drink-inst").textContent = newDrinksObj.strInstructions;
         
-        var stringText = ""
-        for (const key in newDrinksObj[1]) {
-            console.log(newDrinksObj[1])
-            if (!key.startsWith("strIngredient")) { continue }
-            if (newDrinksObj[1][key] != null && newDrinksObj[1][key] != undefined) {
-            let measureKey = key.replace('Ingredient', 'Measure') // strIngredient1 => strMeasure1
-            stringText = stringText + `${newDrinksObj[1][key]}(${newDrinksObj[1][measureKey]}), `
-        }
-    }
-        document.getElementById("ing").textContent = stringText.replaceAll('(null)', '').slice(0, -2)
-        // document.getElementById("ing").textContent = `${newDrinksObj.strIngredient1}`;
+        // var stringText = ""
+    //     for (const key in newDrinksObj[1]) {
+    //         console.log(newDrinksObj[1])
+    //         if (!key.startsWith("strIngredient")) { continue }
+    //         if (newDrinksObj[1][key] != null && newDrinksObj[1][key] != undefined) {
+    //         let measureKey = key.replace('Ingredient', 'Measure') // strIngredient1 => strMeasure1
+    //         stringText = stringText + `${newDrinksObj[1][key]}(${newDrinksObj[1][measureKey]}), `
+    //     }
+    // }
+        // document.getElementById("ing").textContent = stringText.replaceAll('(null)', '').slice(0, -2)
+        document.getElementById("ing").textContent = `${newDrinksObj.strIngredient1}`;
 
         
         likeNumber.textContent = 0
