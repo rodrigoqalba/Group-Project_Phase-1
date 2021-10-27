@@ -92,14 +92,14 @@ surpriseMeButton.addEventListener("click", () => {
             
         var stringText = ""
         for (const key in randomDrinkArray[1]) {
-        if (!key.startsWith("strIngredient")) { continue }
-        if (randomDrinkArray[1][key] != null && randomDrinkArray[1][key] != undefined) {
+            if (!key.startsWith("strIngredient")) { continue }
+            if (randomDrinkArray[1][key] != null && randomDrinkArray[1][key] != undefined) {
             let measureKey = key.replace('Ingredient', 'Measure') // strIngredient1 => strMeasure1
             stringText = stringText + `${randomDrinkArray[1][key]}(${randomDrinkArray[1][measureKey]}), `
         }
     }
 
-    randomDrinkIngridients.textContent = stringText.replaceAll('(null)', '').slice(0, -2)
+            randomDrinkIngridients.textContent = stringText.replaceAll('(null)', '').slice(0, -2)
             // randomDrinkIngridients.textContent = `Ingredients: ${randomDrinkArray[1].strIngredient1}(${randomDrinkArray[1].strMeasure1}), ${randomDrinkArray[1].strIngredient2}(${randomDrinkArray[1].strMeasure2}), ${randomDrinkArray[1].strIngredient3}(${randomDrinkArray[1].strMeasure3}), ${randomDrinkArray[1].strIngredient4}(${randomDrinkArray[1].strMeasure4})`
             
         }
